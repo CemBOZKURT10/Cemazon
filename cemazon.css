@@ -1,0 +1,250 @@
+/* Cemazon için Özel CSS */
+
+:root {
+    /* Özel renk değişkenleri tanımlanıyor */
+    --primary-color: #0d6efd; /* Ana renk (mavi) */
+    --secondary-color: #ffc107; /* İkinci renk (sarı) */
+    --success-color: #198754; /* Başarı rengi (yeşil) */
+    --danger-color: #dc3545; /* Tehlike rengi (kırmızı) */
+}
+
+body {
+    /* Sayfa genel fontu ve satır yüksekliği ayarlanıyor */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Bölümü (Ana başlık kısmı) */
+.hero-section {
+    background: linear-gradient(135deg, #4a90e2 0%, #50c878 100%) !important; /* New vibrant gradient */
+    color: #ffffff !important; /* Yazı rengini beyaz yap */
+    text-align: center; /* Yazıyı ortala */
+    padding: 2rem; /* İçerik için boşluk ekle */
+}
+
+.hero-section h1 {
+    font-weight: 700; /* Make the main heading bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for better visibility */
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Increase the font size for better readability */
+    font-weight: 500; /* Make the paragraph text semi-bold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Ürün Kartları */
+.product-card {
+    border: none; /* Kartın kenarlıklarını kaldır */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Gölgelendirme efekti */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
+    height: 100%;
+}
+
+.product-card:hover {
+    /* Hover (fare ile üzerine gelince) durumunda kartın hareketi ve gölgelendirme değişiyor */
+    transform: translateY(-5px); /* Kartı yukarı kaydır */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Daha belirgin gölge */
+}
+
+.product-image {
+    /* Ürün resminin boyutu ve görüntü düzeni */
+    height: 200px;
+    object-fit: cover; /* Resmi kare ya da dikdörtgen olmadan en iyi şekilde yerleştir */
+    width: 100%;
+}
+
+.product-price {
+    /* Ürün fiyatının stili */
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--success-color); /* Yeşil renkte fiyat */
+}
+
+.product-old-price {
+    /* Eski fiyat için stil */
+    text-decoration: line-through; /* Üstü çizili metin */
+    color: #6c757d; /* Gri renk */
+    font-size: 0.9rem;
+}
+
+/* Butonlar */
+.btn-add-cart {
+    background-color: var(--secondary-color); /* Buton rengi sarı */
+    border: none; /* Kenarlık yok */
+    color: #000; /* Yazı rengi siyah */
+    font-weight: 500; /* Yazı kalınlığı */
+    transition: all 0.3s ease; /* Geçiş efekti */
+}
+
+.btn-add-cart:hover {
+    /* Hover (fare ile üzerine gelince) durumu */
+    background-color: #e0a800; /* Butonun rengi daha koyulaşır */
+    transform: scale(1.05); /* Butonu biraz büyüt */
+}
+
+/* Navigasyon Menü */
+.navbar-nav .nav-link {
+    font-weight: 500; /* Bağlantı yazı kalınlığı */
+    transition: color 0.3s ease; /* Renk geçişi efekti */
+}
+
+.navbar-nav .nav-link:hover {
+    /* Hover durumu: Bağlantı rengini ana renge çevir */
+    color: var(--primary-color) !important;
+}
+
+/* Arama Alanı */
+.form-control:focus {
+    /* Arama kutusuna odaklandığında sınır rengini değiştir */
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25); /* Sarı renkli gölge */
+}
+
+/* Sepet Rozeti */
+.badge {
+    font-size: 0.7rem; /* Sepet rozetinin font boyutu */
+}
+
+/* Footer (Altbilgi) */
+footer {
+    /* Altbilgi arka plan rengini karanlık yap */
+    background-color: #212529 !important;
+}
+
+.social-links a {
+    /* Sosyal medya linklerine hover efekti */
+    transition: color 0.3s ease;
+}
+
+social-links a:hover {
+    /* Sosyal medya linklerine üzerine gelince renk değiştir */
+    color: var(--secondary-color) !important;
+}
+
+/* Sepet Modal (Açılır sepet penceresi) */
+.cart-item {
+    /* Sepet öğesinin alt sınırını belirle */
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 0;
+}
+
+.cart-item:last-child {
+    /* Son öğenin alt sınırını kaldır */
+    border-bottom: none;
+}
+
+.cart-item-image {
+    /* Sepet öğesinin resmini düzenle */
+    width: 60px;
+    height: 60px;
+    object-fit: cover; /* Resmin düzgün görünmesini sağla */
+}
+
+/* Logo Ayarları */
+header h2 img {
+    display: block; /* Ensure the logo is treated as a block element */
+    margin: 0; /* Remove margins */
+    max-height: 100px; /* Original maximum height */
+    max-width: 100%; /* Ensure the logo scales proportionally */
+}
+
+header .fa-map-marker-alt {
+    color: var(--secondary-color); /* Use the secondary color for the icon */
+    font-size: 1.5rem; /* Adjust icon size */
+}
+
+header span {
+    font-size: 1.2rem; /* Adjust text size */
+    font-weight: 500; /* Make the text semi-bold */
+}
+
+/* Duyarlı Tasarım (Responsive) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem; /* Küçük ekranlarda başlık font boyutunu küçült */
+    }
+    
+    .product-card {
+        margin-bottom: 1rem; /* Ürün kartları arasına boşluk ekle */
+    }
+    
+    .social-links a {
+        font-size: 1.5rem; /* Sosyal medya ikonlarının boyutunu büyüt */
+    }
+}
+
+/* Yükleniyor Animasyonu */
+.loading {
+    /* Yükleniyor simgesinin stilini tanımlar */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite; /* Dönen animasyon */
+}
+
+@keyframes spin {
+    /* Dönen animasyon */
+    to { transform: rotate(360deg); }
+}
+
+/* Kategori Filtre Aktif Durum */
+.nav-link.active {
+    /* Aktif kategori bağlantısının stilini belirle */
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* Özel Kaydırıcı (Scrollbar) */
+::-webkit-scrollbar {
+    /* Kaydırıcı (scrollbar) genişliği */
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /* Kaydırıcı yolu (track) rengi */
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    /* Kaydırıcı yama (thumb) rengi */
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* Kaydırıcı üzerine gelindiğinde rengi değiştir */
+    background: #0056b3;
+}
+
+/* Firefox Kaydırıcı */
+* {
+    /* Firefox için kaydırıcı stilini ayarla */
+    scrollbar-width: thin; /* İnce kaydırıcı */
+    scrollbar-color: var(--primary-color) #f1f1f1; /* Kaydırıcı rengi */
+}
+
+/* Animasyonları azaltmak için kullanıcı tercihi */
+@media (prefers-reduced-motion: reduce) {
+    /* Animasyonları devre dışı bırak */
+    .product-card,
+    .btn-add-cart,
+    .navbar-nav .nav-link,
+    .social-links a {
+        transition: none;
+    }
+    
+    .loading {
+        animation: none; /* Yükleniyor animasyonunu kaldır */
+    }
+}
+
+header {
+    background: linear-gradient(135deg, #4a90e2 0%, #50c878 100%) !important; /* Apply the vibrant gradient */
+    display: flex;
+    align-items: center;
+    padding: 0; /* Remove extra padding */
+}
